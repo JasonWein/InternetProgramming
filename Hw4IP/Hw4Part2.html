@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Author: Jason Wein
+Class: Internet Programming
+Date: 20 March, 2019 -->
+<html>
+<head>
+<title> Homework 4 part 2 </title>
+<h1> Homework 4 part 2 </h2>
+</head>
+<script>
+function fillOtherBox(f){
+	if(f.same.checked == true){
+		f.billingName.value = f.shippingName.value;
+		f.billingZip.value = f.shippingZip.value;
+	}
+	else{
+		f.billingName.value = "";
+		f.billingZip.value = "";
+	}
+}
+</script>
+<p> Shipping Information </p>
+<form name = "myForm" action = "/formtest.php">
+Name: <br><input type = "text" name = "shippingName"><br>
+Zip Code: <br><input type = "text" name = "shippingZip"><br>
+<br><input type="checkbox" name = "same" onclick = "fillOtherBox(this.form)" value="Correct"> Is the Billing Information the Same?
+<p> Billing Information </p>
+Name: <br><input type = "text" name = "billingName"><br>
+Zip Code: <br><input type = "text" name = "billingZip"><br>
+</form>
+		
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- Author: Jason Wein
+Class: Internet Programming
+Date: 20 March, 2019 -->
+<html>
+<body>
+<h1> Homework 4 part 3 </h1>
+<h2>Load an XML file:</h2>
+<p id="demo"></p>
+<!-- Javascript to read from xml doc "mydoc.xml" -->
+<script>
+var parser, xmlDoc;
+var text = "<bookstore><book>" +
+"<title>Harry Potter</title>" +
+"<author>J K. Rowling</author>" +
+"<year>2005</year>" +
+"</book></bookstore>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("demo").innerHTML =
+xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + "<br>" +
+xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue + "<br>" +
+xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue;
+</script>
+
+
+</body>
+</html> 
