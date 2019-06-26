@@ -1,0 +1,5 @@
+1.  You need to develop a multithread program in Python to simulate a checkout in su-permarket.  The process of simulation will last for T1 seconds.  You do not need toconsider thread safety.
+2.  An integer sequence t is used to record the remaining waiting time for each customer.
+3.  One  thread  which  runs  every  one  second  is  used  to  simulate  the  processing  of  thecheckout.(a)  Reduce the remaining processing time of the first customer by one.(b)  Remove the first customer if his remaining processing time reaches zero.(c)  Clean the screen and show the new remaining processing time.
+4.  Another thread is used to generate one new customer every T2 seconds.(a)  The new customer will leave the supermarket if he or she needs to join a queuewith more than R customers.(b)  The processing time for the new customer is a random integer in [Tmin; Tmax)
+5.  An example program run is shown as follows.Checkout:  3 12 45 5 61, after one second, we have:Checkout:  2 12 45 5 61, after one second, we have:Checkout:  1 12 45 5 61 22, after one second, we have:Checkout:  12 45 5 61 22, after one second, we have:Checkout:  11 45 5 61 22
